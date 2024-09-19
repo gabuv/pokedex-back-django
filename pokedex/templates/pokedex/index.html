@@ -1,0 +1,8 @@
+{% if last_discovered_pokemon %}
+    <p>Dernier Pokemon rencontré : {{last_discovered_pokemon.name}}</p>
+    <img src="{{last_discovered_pokemon.image_src}}">
+
+{% else %}
+    <p>Aucun Pokemon rencontré pour l'instant.</p>
+    <button (click)="launch_init_pokedex()">Initialiser le Pokedex ?</button>
+{% endif %}
